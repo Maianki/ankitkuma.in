@@ -1,3 +1,9 @@
+import {
+  JSXElementConstructor,
+  ReactElement,
+  ReactFragment,
+  ReactPortal,
+} from 'react';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
@@ -12,6 +18,16 @@ const Home: NextPageWithLayout = () => {
 
 export default Home;
 
-Home.getLayout = (page) => {
-  return <div>Configured</div>;
+Home.getLayout = (
+  page:
+    | string
+    | number
+    | boolean
+    | ReactElement<any, string | JSXElementConstructor<any>>
+    | ReactFragment
+    | ReactPortal
+    | null
+    | undefined
+) => {
+  return <div>Configured {page}</div>;
 };
