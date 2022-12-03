@@ -4,9 +4,8 @@ import {
   ReactFragment,
   ReactPortal,
 } from 'react';
-import { NextPageWithLayout } from './page';
 
-const Home: NextPageWithLayout = () => {
+const Home = () => {
   return (
     <section className="bg-gradient-to-r from-cyan-500 to-blue-500 backdrop-blur">
       <h1>
